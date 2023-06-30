@@ -28,6 +28,7 @@
     {"name":"s_skeleton_roll","order":10,"path":"sprites/s_skeleton_roll/s_skeleton_roll.yy",},
     {"name":"s_skeleton_attack_three","order":2,"path":"sprites/s_skeleton_attack_three/s_skeleton_attack_three.yy",},
     {"name":"o_input","order":2,"path":"objects/o_input/o_input.yy",},
+    {"name":"o_butt","order":3,"path":"objects/o_butt/o_butt.yy",},
     {"name":"s_skeleton_attack_two_damage","order":5,"path":"sprites/s_skeleton_attack_two_damage/s_skeleton_attack_two_damage.yy",},
     {"name":"s_skeleton_attack_two","order":4,"path":"sprites/s_skeleton_attack_two/s_skeleton_attack_two.yy",},
     {"name":"s_skeleton_mask","order":9,"path":"sprites/s_skeleton_mask/s_skeleton_mask.yy",},
