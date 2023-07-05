@@ -34,7 +34,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6cd3db65-a4d0-4f38-bda2-27fb35c26b1b","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 7,
+  "origin": 9,
   "parent": {
     "name": "Knight",
     "path": "folders/Sprites/Knight.yy",
@@ -81,7 +81,7 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 40,
+    "xorigin": 24,
     "yorigin": 48,
   },
   "swatchColours": null,

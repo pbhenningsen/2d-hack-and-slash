@@ -46,6 +46,12 @@ switch (state)
 		{
 			move_and_crash(-roll_speed,0);
 		}
+			if animation_end()
+		{
+			state = "move";
+		}
+		
+
 		#endregion
 		break;	
 	case "attack one":
@@ -55,6 +61,10 @@ switch (state)
 		if input.attack && animation_hit_frame_range(2,4)
 		{
 			state = "attack two";
+		}
+		if animation_end()
+		{
+			state = "move";
 		}
 		#endregion
 		break;
@@ -66,11 +76,19 @@ switch (state)
 		{
 			state = "attack three";
 		}
+		if animation_end()
+		{
+			state = "move";
+		}
 		#endregion
 		break;
 	case "attack three":
 		#region Attack State Three
 		set_state_sprite(s_skeleton_attack_three,0.6,0);
+		if animation_end()
+		{
+			state = "move";
+		}
 		#endregion
 		break;
 }
