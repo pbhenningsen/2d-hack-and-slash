@@ -12,7 +12,10 @@
     "name": "Objects",
     "path": "folders/Objects.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_lifeForm",
+    "path": "objects/o_lifeForm/o_lifeForm.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -32,6 +35,9 @@
     "name": "s_knight_idle",
     "path": "sprites/s_knight_idle/s_knight_idle.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "s_knight_mask",
+    "path": "sprites/s_knight_mask/s_knight_mask.yy",
+  },
   "visible": true,
 }

@@ -56,8 +56,11 @@ switch (state)
 		break;	
 	case "attack one":
 		#region Attack State One
-		set_state_sprite(s_skeleton_attack_one,0.6,0);
-	
+		set_state_sprite(s_skeleton_attack_one,0.7,0);
+		if animation_hit_frame(0)
+		{
+			create_hitbox(x,y,self,s_skeleton_attack_one_damage,3,4,5,image_xscale);
+		}
 		if input.attack && animation_hit_frame_range(2,4)
 		{
 			state = "attack two";
@@ -72,6 +75,11 @@ switch (state)
 		#region Attack State Two
 		set_state_sprite(s_skeleton_attack_two,0.6,0);
 		
+		if animation_hit_frame(2)
+		{
+			create_hitbox(x,y,self,s_skeleton_attack_two_damage,3,4,5,image_xscale);
+		}
+		
 		if input.attack && animation_hit_frame_range(2,4)
 		{
 			state = "attack three";
@@ -85,10 +93,26 @@ switch (state)
 	case "attack three":
 		#region Attack State Three
 		set_state_sprite(s_skeleton_attack_three,0.6,0);
+		if animation_hit_frame(2)
+		{
+			create_hitbox(x,y,self,s_skeleton_attack_three_damage,4,4,8,image_xscale);
+		}
+		
 		if animation_end()
 		{
 			state = "move";
 		}
 		#endregion
+		break;
+		
+	case "knockBack":
+		#region Knock Back State
+		knockBack_state(s_skeleton_hitstun,"move");
+		#endregion
+		break;
+		
+	default:
+		show_debug_message("State "+state+" does not exist.");
+		state = "move";
 		break;
 }

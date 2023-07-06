@@ -1,0 +1,1 @@
+instance_destroy();//destroys the hitbox after that specific amount of time
