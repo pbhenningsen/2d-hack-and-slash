@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_knight",
+  "name": "o_skeleton_bone",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"o_wall","path":"objects/o_wall/o_wall.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -12,10 +12,7 @@
     "name": "Objects",
     "path": "folders/Objects.yy",
   },
-  "parentObjectId": {
-    "name": "o_enemy_parent",
-    "path": "objects/o_enemy_parent/o_enemy_parent.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -32,12 +29,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_knight_idle",
-    "path": "sprites/s_knight_idle/s_knight_idle.yy",
+    "name": "s_skeleton_bones",
+    "path": "sprites/s_skeleton_bones/s_skeleton_bones.yy",
   },
-  "spriteMaskId": {
-    "name": "s_knight_mask",
-    "path": "sprites/s_knight_mask/s_knight_mask.yy",
-  },
+  "spriteMaskId": null,
   "visible": true,
 }

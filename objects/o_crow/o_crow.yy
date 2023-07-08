@@ -1,10 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_knight",
+  "name": "o_crow",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -32,12 +33,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_knight_idle",
-    "path": "sprites/s_knight_idle/s_knight_idle.yy",
+    "name": "s_crow",
+    "path": "sprites/s_crow/s_crow.yy",
   },
-  "spriteMaskId": {
-    "name": "s_knight_mask",
-    "path": "sprites/s_knight_mask/s_knight_mask.yy",
-  },
+  "spriteMaskId": null,
   "visible": true,
 }
