@@ -23,6 +23,13 @@ switch (state)
 			sprite_index = s_skeleton_idle;	
 			image_speed = 0.4;
 		}
+		else
+		{
+			if animation_hit_frame(2) or animation_hit_frame(5)
+			{
+				audio_play_sound(a_footstep,2,false);
+			}
+		}
 		if input.roll
 		{
 			state = "roll";
@@ -59,6 +66,7 @@ switch (state)
 		set_state_sprite(s_skeleton_attack_one,0.7,0);
 		if animation_hit_frame(0)
 		{
+			audio_play_sound(a_swipe,3,false);
 			create_hitbox(x,y,self,s_skeleton_attack_one_damage,3,4,5,image_xscale);
 		}
 		if input.attack && animation_hit_frame_range(2,4)
@@ -77,6 +85,7 @@ switch (state)
 		
 		if animation_hit_frame(2)
 		{
+			audio_play_sound(a_swipe,3,false);
 			create_hitbox(x,y,self,s_skeleton_attack_two_damage,3,4,5,image_xscale);
 		}
 		
@@ -95,6 +104,7 @@ switch (state)
 		set_state_sprite(s_skeleton_attack_three,0.6,0);
 		if animation_hit_frame(2)
 		{
+			audio_play_sound(a_swipe,3,false);
 			create_hitbox(x,y,self,s_skeleton_attack_three_damage,4,4,8,image_xscale);
 		}
 		

@@ -10,7 +10,6 @@
     {"name":"inst_6B34BB61","path":"rooms/r_graveyard/r_graveyard.yy",},
     {"name":"inst_731FC6AF","path":"rooms/r_graveyard/r_graveyard.yy",},
     {"name":"inst_62A94337","path":"rooms/r_graveyard/r_graveyard.yy",},
-    {"name":"inst_162845F4","path":"rooms/r_graveyard/r_graveyard.yy",},
     {"name":"inst_731901F1","path":"rooms/r_graveyard/r_graveyard.yy",},
     {"name":"inst_22295CC5","path":"rooms/r_graveyard/r_graveyard.yy",},
     {"name":"inst_52E4881D","path":"rooms/r_graveyard/r_graveyard.yy",},
@@ -35,7 +34,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_62A94337","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_wall","path":"objects/o_wall/o_wall.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"o_wall","path":"objects/o_wall/o_wall.yy",},"propertyId":{"name":"visible","path":"objects/o_wall/o_wall.yy",},"value":"False",},
           ],"rotation":0.0,"scaleX":0.5,"scaleY":1.0,"x":16.0,"y":256.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_162845F4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_knight","path":"objects/o_knight/o_knight.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":704.0,"y":288.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_731901F1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_wall","path":"objects/o_wall/o_wall.yy",},"properties":[],"rotation":0.0,"scaleX":49.5,"scaleY":4.0,"x":-160.0,"y":288.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_22295CC5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_grave","path":"objects/o_grave/o_grave.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":288.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_52E4881D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_grave","path":"objects/o_grave/o_grave.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":672.0,"y":288.0,},

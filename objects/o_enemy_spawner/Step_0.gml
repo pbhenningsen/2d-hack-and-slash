@@ -7,6 +7,10 @@ if instance_exists(o_skeleton) && _enemy_count < o_skeleton.kills/4 //makes game
 			exit;//caps our enemies at 5. 
 		}
 		var _enemy = choose(o_knight,o_crow,o_crow);
+		if o_skeleton.kills > 20 && !instance_exists(o_boss)
+		{
+			_enemy = choose(o_crow,o_crow,o_knight,o_boss);
+		}
 		
 		var _new_x = random_range(220, room_width -220);
 		while point_distance(_new_x,0,o_skeleton.x,0) < 220

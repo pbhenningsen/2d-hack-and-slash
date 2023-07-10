@@ -4,6 +4,7 @@ if creator == noone || creator == other || ds_list_find_index(hit_objects, other
 }
 
 other.hp -= damage;//we deal damage to the object
+audio_play_sound(a_medium_hit,4,false);
 repeat (10)
 {
 	instance_create_layer(other.x,other.y-12, "Effects", o_hit_effect);
@@ -11,7 +12,7 @@ repeat (10)
 
 if instance_exists(o_skeleton) 
 {
-	if creator.object_index == o_skeleton && other.hp <= 0
+	if creator.object_index == o_skeleton && other.hp <= 0 && other.state != "death"
 	{
 		o_skeleton.kills+=1;
 	}
@@ -32,8 +33,17 @@ if instance_exists(o_skeleton)
 				_bone.speed = random_range(3,10);
 				_bone.image_index = _i;//we create one of every single bone
 				if _i == 5 _bone.image_angle = 130;//for the sword specifically
-				}
 			}
+			ini_open("save.ini");
+			ini_write_real("Scores", "Kills", other.kills);
+			var _highscore = ini_read_real("Scores", "Highscore", 0);
+			if other.kills > _highscore 
+			{
+				ini_write_real("Scores","Highscore", other.kills);
+			}
+			ini_close();
+			
+		}
 		}
 	} else
 	{
@@ -43,7 +53,7 @@ if instance_exists(o_skeleton)
 }
 
 ds_list_add(hit_objects, other);//we add the id of the object we just hit
-if other.state != "death"
+if other.state != "death" && other.object_index != o_boss
 {
 	other.state = "knockBack";
 }

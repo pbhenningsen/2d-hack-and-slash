@@ -16,7 +16,6 @@ if not instance_exists(o_skeleton) exit;//if the skeleton doesn't exist, we won'
 		}
 		else
 		{
-			x += _direction_facing * chase_speed;
-			//move_and_crash(_direction_facing * chase_speed, 0);
+			move_and_crash(_direction_facing * chase_speed, 0);
 		}
 }
