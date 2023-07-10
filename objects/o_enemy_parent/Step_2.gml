@@ -1,5 +1,5 @@
-if hp < 0 {
-	instance_destroy();
+if hp < 0 && state != "death" {
+	state = "death"; 
 	
 	repeat (experience)
 	{

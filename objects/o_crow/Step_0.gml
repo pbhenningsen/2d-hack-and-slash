@@ -13,4 +13,11 @@ switch(state)
 			vspeed = -1;
 		}
 	break;
+	case "death":
+	repeat(6)
+	{
+		instance_create_layer(x+random_range(-4,4),y-16+random_range(-4,4), "Effects", o_feather);
+	}
+	instance_destroy();
+	break;
 }

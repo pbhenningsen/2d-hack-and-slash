@@ -46,6 +46,11 @@ switch (state)
 		knockBack_state(s_knight_hitstun, "chase");
 		#endregion
 		break;
+	case "death":
+		#region Death State
+		death_state(s_knight_die);
+		#endregion 
+		break;
 		
 		default:
 			show_debug_message("State "+state+" does not exist.");

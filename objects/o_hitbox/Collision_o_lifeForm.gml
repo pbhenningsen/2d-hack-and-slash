@@ -4,6 +4,10 @@ if creator == noone || creator == other || ds_list_find_index(hit_objects, other
 }
 
 other.hp -= damage;//we deal damage to the object
+repeat (10)
+{
+	instance_create_layer(other.x,other.y-12, "Effects", o_hit_effect);
+}
 
 if instance_exists(o_skeleton) 
 {
@@ -11,25 +15,38 @@ if instance_exists(o_skeleton)
 	{
 		o_skeleton.kills+=1;
 	}
-	if other.object_index == o_skeleton && other.hp <= 0
-	{
-		var _number = sprite_get_number(s_skeleton_bones);
-		
-		for (var _i = 0; _i < _number;  _i++)
+	if other.object_index == o_skeleton {
+		//We hit player
+		add_screenshake(4,8);
+	
+		if other.hp <= 0{
 		{
-			var _bx = other.x+random_range(-8,8);
-			var _by = other.y+random_range(-24,8);
-			var _bone = instance_create_layer(_bx,_by,"Instances",o_skeleton_bone);
-			_bone.direction = 90 - (image_xscale * random_range(30,60));//determines the directions the bones fly in so that they always fly away from the enemy hitting you
-			_bone.speed = random_range(3,10);
-			_bone.image_index = _i;//we create one of every single bone
-			if _i == 5 _bone.image_angle = 130;//for the sword specifically
-	}
+			var _number = sprite_get_number(s_skeleton_bones);
+		
+			for (var _i = 0; _i < _number;  _i++)
+				{
+				var _bx = other.x+random_range(-8,8);
+				var _by = other.y+random_range(-24,8);
+				var _bone = instance_create_layer(_bx,_by,"Instances",o_skeleton_bone);
+				_bone.direction = 90 - (image_xscale * random_range(30,60));//determines the directions the bones fly in so that they always fly away from the enemy hitting you
+				_bone.speed = random_range(3,10);
+				_bone.image_index = _i;//we create one of every single bone
+				if _i == 5 _bone.image_angle = 130;//for the sword specifically
+				}
+			}
+		}
+	} else
+	{
+		other.alarm[0] = 120;
+		add_screenshake(2,5);
 	}
 }
 
 ds_list_add(hit_objects, other);//we add the id of the object we just hit
-other.state = "knockBack";
+if other.state != "death"
+{
+	other.state = "knockBack";
+}
 other.knockBack_speed = knockBack * image_xscale;
 
 
